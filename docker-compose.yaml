@@ -1,0 +1,13 @@
+version: '3'
+services:
+  upload-db:
+    image: mongo
+    container_name: upload-db
+    restart: always
+    environment:
+      #- MONGO_INITDB_ROOT_USERNAME=admin
+      #- MONGO_INITDB_ROOT_PASSWORD=123456
+      - MONGO_INITDB_DATABASE=upload-db
+    ports:
+      - 27017:27017
+      - 28017:28017 
